@@ -1,0 +1,75 @@
+
+
+.Home{
+  height: 83vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: white;
+}
+
+
+.cont{
+  height: 500px;
+  width:700px;
+  background-color: #ffffff;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 3fr 2fr;
+}
+
+.logo{
+  align-self: center;
+  justify-self: center;
+  height: 170px;
+  width: 250px;
+}
+
+.input{
+  width: 65%;
+  height: 50px;
+  border-radius: 100px;
+  font-size: 20px;
+  padding-left: 10px;
+  border: 0.5px solid grey;
+}
+
+.button{
+  width: 20%;
+  height: 45px;
+  border-radius: 25px;
+  font-size: 20px;
+  border: 0.5px solid gray;
+}
+
+.result{
+  height: 100px;
+  width: auto;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr;
+}
+
+.tutorial{
+  font-size: 30px;
+  font-weight: 400;
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  color: rgb(1, 180, 1);
+  position: absolute;
+  right: 300px;
+  border-bottom: 3px solid rgb(1, 180, 1);
+}
+.login{
+  font-size: 30px;
+  font-weight: 400;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  height: 50px;
+  width: 180px;
+  border-radius: 100px;
+  background-color: rgb(1, 180, 1);
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
