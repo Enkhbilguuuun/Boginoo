@@ -3,6 +3,7 @@ import React from "react";
 import { useState } from "react";
 import Result from "./Result";
 import { instance } from "../App";
+import { Link } from "react-router-dom";
 
 function Home() {
   const [data, setData] = useState();
@@ -18,7 +19,9 @@ function Home() {
   return (
     <div>
         <div className="tutorial">How it works</div>
-        <div className="login">Login</div>
+        <Link to={"/signin"}>
+        <button className="login">Sign In</button>
+        </Link>
       <div className="Home">
         <div className="cont">
           <img className="logo" src={logo} alt="" />
