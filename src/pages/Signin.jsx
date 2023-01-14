@@ -2,18 +2,19 @@ import React from "react";
 import logo from "../assets/Boginoo.png"
 import { Link } from "react-router-dom";
 import { useState } from "react";
+import {instance} from "../App"
 
 
 function Signin(){
     const [email, setEmail] = useState();
     const [pass, setPass] = useState();
     const createUser = async () => {
-      const res = await instance.post("/users", {
+      const res = await instance.post("/users/signin", {
         email: email,
         password: pass,
       });
       // setData(res.data.data.Shortlink);
-      console.log(res)
+      console.log(email, pass)
     };
     return(
         <div className="signinhome">
@@ -27,13 +28,13 @@ function Signin(){
                 <div className="signin">Sign In</div>
                 <div className="email">
                     <div className="email1">Email:</div>
-                    <input className="email2" placeholder="name@mail.domain" type="text" />
+                    <input onChange={(e) => setEmail(e.target.value)} className="email2" placeholder="name@mail.domain" type="text" />
                 </div>
                 <div className="password">
                     <div className="password1">Password</div>
-                    <input className="password2" placeholder="*********" type="text" />
+                    <input onChange={(e) => setPass(e.target.value)} className="password2" placeholder="*********" type="text" />
                 </div>
-                <button className="button2">Enter</button>
+                <button onClick={createUser} className="button2">Enter</button>
                 <Link to={"/Signup"}>
                 <div className="tosignup">Don't have account?</div>
                 </Link>
